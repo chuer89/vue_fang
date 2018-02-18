@@ -3,11 +3,21 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import _ from 'lodash';
 
-// import Mint from 'mint-ui';
-// Vue.use(Mint);
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css';
+Vue.use(MintUI);
 
 Vue.config.productionTip = false;
+
+_.extend(window, {
+  Vue,
+  router,
+  env: {
+    host: ''
+  }
+});
 
 /* eslint-disable no-new */
 new Vue({
