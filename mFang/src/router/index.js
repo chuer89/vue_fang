@@ -19,6 +19,12 @@ export default new Router({
       path: '/apply',
       name: 'apply',
       component: () => import('@/components/loan/apply')
+    },
+
+    {
+      path: '/product',
+      name: 'product',
+      component: () => import('@/components/loan/product')
     }
   ]
 });

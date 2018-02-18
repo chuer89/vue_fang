@@ -18,6 +18,7 @@
     <div class="product-info">
       <mt-cell
       is-link
+      to="product"
       title="热门贷款产品"></mt-cell>
 
       <div class="product-box">
@@ -60,6 +61,12 @@ export default {
   methods: {
     toApply () {
       window.router.push({ path: 'apply' });
+    },
+
+    toProduct () {
+      window.router.push({
+        path: 'product'
+      });
     }
   }
 };
