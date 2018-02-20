@@ -25,6 +25,16 @@ export default new Router({
       path: '/product',
       name: 'product',
       component: () => import('@/components/loan/product')
+    },
+
+    {
+      path: '/person',
+      name: 'person',
+      component: () => import('@/components/person/index'),
+      children: [{
+        path: '',
+        component: () => import('@/components/common/tabbar')
+      }]
     }
   ]
 });

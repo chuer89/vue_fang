@@ -62,6 +62,10 @@
               <div class="tips">可贷<span class="mark">2-500万</span></div>
               <div class="tips">月费率<span class="mark">0.85%</span></div>
             </div>
+            <div class="tips-box">
+              <div class="tips">放款时长1天</div>
+              <div class="tips">申请人数 6687</div>
+            </div>
           </div>
         </div>
       </div>
@@ -70,8 +74,8 @@
 </template>
 <script>
 export default {
-  
-}
+  name: 'product'
+};
 </script>
 <style lang="scss" scoped>
 .product-list{
@@ -137,4 +141,3 @@ export default {
   }
 }
 </style>
-

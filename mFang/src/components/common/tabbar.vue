@@ -1,8 +1,8 @@
 <template>
   <footer class="footer">
     <div class="space"></div>
-    <div class="bottom">
-      <mt-tabbar v-model="selected">
+    <div>
+      <mt-tabbar v-model="selected" fixed>
         <mt-tab-item id="home">
           <img slot="icon" src="../../assets/100x100.png">
           首页
@@ -24,20 +24,36 @@
   </footer>
 </template>
 <script>
-
-import Vue from 'vue';
-
-import { Tabbar, TabItem } from 'mint-ui';
-
-Vue.component(Tabbar.name, Tabbar);
-Vue.component(TabItem.name, TabItem);
-
 export default {
   name: 'tabbar',
   data () {
     return {
-      selected: 'home'
+      selected: this.$store.state.tabbarPathName
     };
+  },
+
+  watch: {
+    selected (val) {
+      this.$store.commit('changeTabbarPathName', val);
+
+      let pathTo = (path) => {
+        window.router.push({path: path});
+      };
+
+      switch (val) {
+        case 'home':
+          pathTo('/');
+          break;
+        case 'loan':
+          break;
+        case 'query':
+          break;
+        case 'person':
+          pathTo('person');
+          break;
+      }
+      // console.log(val);
+    }
   }
 };
 </script>
@@ -46,12 +62,6 @@ export default {
   .footer{
     .space{
       height: 55px;
-    }
-    .bottom{
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
     }
   }
 </style>

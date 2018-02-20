@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import _ from 'lodash';
+import store from './vuex/store.js';
 
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css';
@@ -21,6 +22,7 @@ _.extend(window, {
 
 /* eslint-disable no-new */
 new Vue({
+  store,
   el: '#app',
   router,
   components: { App },
