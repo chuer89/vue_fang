@@ -51,7 +51,7 @@
 
 <script>
 export default {
-  name: 'homeIndex',
+  name: 'home',
   data () {
     return {
       limit: '500,000',

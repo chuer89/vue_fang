@@ -32,6 +32,9 @@ input{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.gray-bg{
+  background: #f5f5f5;
+}
 
 .mint-header{
   background: #6e53fa;

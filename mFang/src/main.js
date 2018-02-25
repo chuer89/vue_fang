@@ -6,6 +6,8 @@ import router from './router';
 import _ from 'lodash';
 import store from './vuex/store.js';
 
+import 'lib-flexible';
+
 import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css';
 Vue.use(MintUI);
